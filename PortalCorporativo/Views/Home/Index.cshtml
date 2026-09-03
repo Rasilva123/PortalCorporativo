@@ -1,0 +1,20 @@
+﻿@model List<PortalCorporativo.Models.ServicoModel>
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">Serviços</h1>
+
+    <div class="row">
+
+        @foreach (var servico in Model)
+        {
+            <div class="col-md-4 mb-3">
+
+                <partial name="_CardServico" model="servico" />
+
+            </div>
+        }
+
+    </div>
+
+</div>

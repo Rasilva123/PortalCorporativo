@@ -1,0 +1,33 @@
+@model PortalCorporativo.Models.ServicoModel
+
+<div class="card h-100 shadow-sm">
+    <div class="card-body">
+
+        <h5 class="card-title">
+            @Model.Nome
+        </h5>
+
+        <p class="card-text">
+            @Model.Descricao
+        </p>
+
+        <p class="card-text">
+            <strong>Preço:</strong>
+            @Model.Preco.ToString("C")
+        </p>
+
+        @if (Model.Disponivel)
+        {
+            <span class="badge bg-success">
+                Disponível
+            </span>
+        }
+        else
+        {
+            <span class="badge bg-danger">
+                Indisponível
+            </span>
+        }
+
+    </div>
+</div>
